@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1350" viewBox="0 0 1440 1350" font-family="Noto Sans CJK SC, sans-serif">
+  <rect width="1440" height="1350" fill="#eef4f8"/>
+
+  <text x="720" y="56" font-size="38" font-weight="bold" fill="#22384f" text-anchor="middle">dot 出海 · 一图流总决策树</text>
+  <text x="720" y="90" font-size="17" fill="#6b8299" text-anchor="middle">从「我想让 dot 连我的服务」到安全出海，一张图走完</text>
+
+  <!-- ===== 起点 ===== -->
+  <rect x="510" y="130" width="420" height="60" rx="30" fill="#2e5f8a"/>
+  <text x="720" y="168" font-size="21" font-weight="bold" fill="#ffffff" text-anchor="middle">我想让 dot 连我的服务</text>
+  <line x1="720" y1="190" x2="720" y2="225" stroke="#7a93a8" stroke-width="3"/>
+
+  <!-- ===== 第一层：分流 ===== -->
+  <rect x="560" y="225" width="320" height="48" rx="24" fill="#5b7a94"/>
+  <text x="720" y="256" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">第一层 · 我的服务是哪种？</text>
+  <line x1="720" y1="273" x2="720" y2="300" stroke="#7a93a8" stroke-width="3"/>
+  <line x1="200" y1="300" x2="1160" y2="300" stroke="#7a93a8" stroke-width="3"/>
+  <line x1="200" y1="300" x2="200" y2="330" stroke="#7a93a8" stroke-width="3"/>
+  <line x1="520" y1="300" x2="520" y2="330" stroke="#7a93a8" stroke-width="3"/>
+  <line x1="840" y1="300" x2="840" y2="330" stroke="#7a93a8" stroke-width="3"/>
+  <line x1="1160" y1="300" x2="1160" y2="330" stroke="#7a93a8" stroke-width="3"/>
+
+  <!-- L1 四张分类卡 -->
+  <g>
+    <rect x="50" y="330" width="300" height="120" rx="16" fill="#ffffff" stroke="#c3d4e0" stroke-width="2"/>
+    <rect x="50" y="330" width="300" height="8" rx="4" fill="#7ba3c4"/>
+    <text x="200" y="378" font-size="19" font-weight="bold" fill="#22384f" text-anchor="middle">请求-响应型</text>
+    <text x="200" y="410" font-size="13" fill="#5b7185" text-anchor="middle">HTTP API · 网页 · REST 接口</text>
+    <text x="200" y="432" font-size="13" fill="#8aa3b5" text-anchor="middle">问答式</text>
+  </g>
+  <g>
+    <rect x="370" y="330" width="300" height="120" rx="16" fill="#ffffff" stroke="#c3d4e0" stroke-width="2"/>
+    <rect x="370" y="330" width="300" height="8" rx="4" fill="#7ba3c4"/>
+    <text x="520" y="378" font-size="19" font-weight="bold" fill="#22384f" text-anchor="middle">长连接型</text>
+    <text x="520" y="410" font-size="13" fill="#5b7185" text-anchor="middle">WebSocket · IM 推送 · 实时通知</text>
+    <text x="520" y="432" font-size="13" fill="#8aa3b5" text-anchor="middle">一直聊着</text>
+  </g>
+  <g>
+    <rect x="690" y="330" width="300" height="120" rx="16" fill="#ffffff" stroke="#c3d4e0" stroke-width="2"/>
+    <rect x="690" y="330" width="300" height="8" rx="4" fill="#7ba3c4"/>
+    <text x="840" y="378" font-size="19" font-weight="bold" fill="#22384f" text-anchor="middle">原始字节流型</text>
+    <text x="840" y="410" font-size="13" fill="#5b7185" text-anchor="middle">Minecraft · SSH · 数据库 · Redis</text>
+    <text x="840" y="432" font-size="13" fill="#8aa3b5" text-anchor="middle">非 HTTP 的 TCP</text>
+  </g>
+  <g>
+    <rect x="1010" y="330" width="300" height="120" rx="16" fill="#ffffff" stroke="#c3d4e0" stroke-width="2"/>
+    <rect x="1010" y="330" width="300" height="8" rx="4" fill="#7ba3c4"/>
+    <text x="1160" y="378" font-size="19" font-weight="bold" fill="#22384f" text-anchor="middle">UDP · 需要被主动连</text>
+    <text x="1160" y="410" font-size="13" fill="#5b7185" text-anchor="middle">无连接协议 · 需要入站连接</text>
+    <text x="1160" y="432" font-size="13" fill="#8aa3b5" text-anchor="middle">别人来找你</text>
+  </g>
+
+  <!-- L1 → L2 连接 + 层标 -->
+  <line x1="200" y1="450" x2="200" y2="485" stroke="#7a93a8" stroke-width="3"/>
+  <line x1="520" y1="450" x2="520" y2="485" stroke="#7a93a8" stroke-width="3"/>
+  <line x1="840" y1="450" x2="840" y2="485" stroke="#7a93a8" stroke-width="3"/>
+  <line x1="1160" y1="450" x2="1160" y2="485" stroke="#c25a5a" stroke-width="3"/>
+  <text x="720" y="474" font-size="13" fill="#8aa3b5" text-anchor="middle">—— 第二层 · 对策 ——</text>
+
+  <!-- L2 对策卡 -->
+  <g>
+    <rect x="50" y="485" width="300" height="120" rx="16" fill="#e4f3ea" stroke="#3f9e6e" stroke-width="2.5"/>
+    <text x="200" y="532" font-size="20" font-weight="bold" fill="#2f7a55" text-anchor="middle">直接穿 · 姿势一</text>
+    <text x="200" y="564" font-size="14" fill="#4a6b58" text-anchor="middle">HTTP 是母语，什么都不用做</text>
+    <text x="200" y="588" font-size="13" fill="#7a9a88" text-anchor="middle">成本最低</text>
+  </g>
+  <g>
+    <rect x="370" y="485" width="300" height="120" rx="16" fill="#e4f3ea" stroke="#3f9e6e" stroke-width="2.5"/>
+    <text x="520" y="532" font-size="20" font-weight="bold" fill="#2f7a55" text-anchor="middle">直接穿 · 姿势二</text>
+    <text x="520" y="564" font-size="14" fill="#4a6b58" text-anchor="middle">心跳 + 重连退避 + 消息幂等</text>
+    <text x="520" y="588" font-size="13" fill="#7a9a88" text-anchor="middle">你必须自己一直在线</text>
+  </g>
+  <g>
+    <rect x="690" y="485" width="300" height="120" rx="16" fill="#e8eef6" stroke="#3a6ea5" stroke-width="2.5"/>
+    <text x="840" y="532" font-size="20" font-weight="bold" fill="#2e5f8a" text-anchor="middle">wss 套壳 · 姿势三</text>
+    <text x="840" y="564" font-size="14" fill="#46617c" text-anchor="middle">本地中继 + 公网反代 ws 桥</text>
+    <text x="840" y="588" font-size="13" fill="#7b93ab" text-anchor="middle">两端各加一层，成本最高</text>
+  </g>
+  <g>
+    <rect x="1010" y="485" width="300" height="120" rx="16" fill="#f7e9e9" stroke="#c25a5a" stroke-width="2.5"/>
+    <text x="1160" y="532" font-size="20" font-weight="bold" fill="#a14f4f" text-anchor="middle">没有路 · 改架构</text>
+    <text x="1160" y="564" font-size="14" fill="#7a5a5a" text-anchor="middle">改造成 HTTP 轮询或换协议</text>
+    <text x="1160" y="588" font-size="13" fill="#a98a8a" text-anchor="middle">不是难一点，是没这条路</text>
+  </g>
+
+  <!-- 三支汇合 -->
+  <line x1="200" y1="605" x2="200" y2="650" stroke="#7a93a8" stroke-width="3"/>
+  <line x1="520" y1="605" x2="520" y2="650" stroke="#7a93a8" stroke-width="3"/>
+  <line x1="840" y1="605" x2="840" y2="650" stroke="#7a93a8" stroke-width="3"/>
+  <line x1="200" y1="650" x2="840" y2="650" stroke="#7a93a8" stroke-width="3"/>
+  <line x1="520" y1="650" x2="520" y2="690" stroke="#7a93a8" stroke-width="3"/>
+
+  <!-- 红支短路出口 -->
+  <line x1="1160" y1="605" x2="1160" y2="682" stroke="#c25a5a" stroke-width="3"/>
+  <circle cx="1160" cy="694" r="11" fill="#ffffff" stroke="#c25a5a" stroke-width="2.5"/>
+  <line x1="1155" y1="689" x2="1165" y2="699" stroke="#c25a5a" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="1165" y1="689" x2="1155" y2="699" stroke="#c25a5a" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="1160" y="730" font-size="13" fill="#a14f4f" text-anchor="middle">短路出口：先改架构，再回来选路</text>
+
+  <!-- ===== 第三层：配方 ===== -->
+  <rect x="350" y="690" width="340" height="48" rx="24" fill="#5b7a94"/>
+  <text x="520" y="721" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">第三层 · 公网入口三选一</text>
+  <line x1="520" y1="738" x2="520" y2="765" stroke="#7a93a8" stroke-width="3"/>
+  <line x1="280" y1="765" x2="1160" y2="765" stroke="#7a93a8" stroke-width="3"/>
+  <line x1="280" y1="765" x2="280" y2="795" stroke="#7a93a8" stroke-width="3"/>
+  <line x1="720" y1="765" x2="720" y2="795" stroke="#7a93a8" stroke-width="3"/>
+  <line x1="1160" y1="765" x2="1160" y2="795" stroke="#7a93a8" stroke-width="3"/>
+
+  <!-- 配方卡 A（实测） -->
+  <g>
+    <rect x="110" y="795" width="340" height="210" rx="18" fill="#ffffff" stroke="#3f9e6e" stroke-width="2.5"/>
+    <text x="280" y="838" font-size="18" font-weight="bold" fill="#22384f" text-anchor="middle">A · 隧道商 + 域名 + 真证书</text>
+    <rect x="185" y="856" width="190" height="32" rx="16" fill="#3f9e6e"/>
+    <text x="280" y="878" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">✓ 已端到端实测</text>
+    <text x="280" y="922" font-size="14" fill="#5b7185" text-anchor="middle">免费起步首选，证书自动续期</text>
+    <text x="280" y="948" font-size="14" fill="#5b7185" text-anchor="middle">策略 strict，防静默回落自签</text>
+    <text x="280" y="980" font-size="13" fill="#8aa3b5" text-anchor="middle">代价：端口与节点由隧道商分配</text>
+  </g>
+  <!-- 配方卡 B -->
+  <g>
+    <rect x="550" y="795" width="340" height="210" rx="18" fill="#ffffff" stroke="#c3d4e0" stroke-width="2"/>
+    <text x="720" y="838" font-size="18" font-weight="bold" fill="#22384f" text-anchor="middle">B · Cloudflare Tunnel</text>
+    <rect x="605" y="856" width="230" height="32" rx="16" fill="#eef1f4" stroke="#b3bec7" stroke-width="1.5"/>
+    <path d="M630,864 l7,12 h-14 Z" fill="#d9a441"/>
+    <rect x="629.4" y="867.5" width="1.6" height="4.5" fill="#ffffff"/>
+    <circle cx="630.2" cy="874" r="1.1" fill="#ffffff"/>
+    <text x="736" y="878" font-size="14" fill="#5f6f7d" text-anchor="middle">原理推断 · 尚未实测</text>
+    <text x="720" y="922" font-size="14" fill="#5b7185" text-anchor="middle">最偷懒：一条命令，证书全自动</text>
+    <text x="720" y="948" font-size="14" fill="#5b7185" text-anchor="middle">流量过 CF 回源，国内访问慢</text>
+    <text x="720" y="980" font-size="13" fill="#8aa3b5" text-anchor="middle">只适合纯 dot 用的服务</text>
+  </g>
+  <!-- 配方卡 C -->
+  <g>
+    <rect x="990" y="795" width="340" height="210" rx="18" fill="#ffffff" stroke="#c3d4e0" stroke-width="2"/>
+    <text x="1160" y="838" font-size="18" font-weight="bold" fill="#22384f" text-anchor="middle">C · 境外 VPS 自建</text>
+    <rect x="1045" y="856" width="230" height="32" rx="16" fill="#eef1f4" stroke="#b3bec7" stroke-width="1.5"/>
+    <path d="M1070,864 l7,12 h-14 Z" fill="#d9a441"/>
+    <rect x="1069.4" y="867.5" width="1.6" height="4.5" fill="#ffffff"/>
+    <circle cx="1070.2" cy="874" r="1.1" fill="#ffffff"/>
+    <text x="1176" y="878" font-size="14" fill="#5f6f7d" text-anchor="middle">原理推断 · 尚未实测</text>
+    <text x="1160" y="922" font-size="14" fill="#5b7185" text-anchor="middle">长期正经干，入口完全属于自己</text>
+    <text x="1160" y="948" font-size="14" fill="#5b7185" text-anchor="middle">标准端口可走 HTTP-01 签证书</text>
+    <text x="1160" y="980" font-size="13" fill="#8aa3b5" text-anchor="middle">代价：机器钱 + 运维自己扛</text>
+  </g>
+
+  <!-- 配方汇入闸门 -->
+  <line x1="280" y1="1005" x2="280" y2="1040" stroke="#7a93a8" stroke-width="3"/>
+  <line x1="720" y1="1005" x2="720" y2="1040" stroke="#7a93a8" stroke-width="3"/>
+  <line x1="1160" y1="1005" x2="1160" y2="1040" stroke="#7a93a8" stroke-width="3"/>
+  <line x1="280" y1="1040" x2="1160" y2="1040" stroke="#7a93a8" stroke-width="3"/>
+  <line x1="720" y1="1040" x2="720" y2="1075" stroke="#7a93a8" stroke-width="3"/>
+
+  <!-- ===== 出口必经闸（安全光带） ===== -->
+  <rect x="80" y="1075" width="1280" height="140" rx="20" fill="#2e5f8a"/>
+  <path d="M142,1098 l14,24 h-28 Z" fill="#d9a441"/>
+  <rect x="140.8" y="1105" width="2.6" height="8" fill="#2e5f8a"/>
+  <circle cx="142.1" cy="1117" r="1.8" fill="#2e5f8a"/>
+  <text x="176" y="1116" font-size="21" font-weight="bold" fill="#ffffff">出口必经闸 · 公网暴露同责</text>
+  <text x="176" y="1142" font-size="13" fill="#9fc3e0">给 dot 开服务 = 在公网暴露服务：dot 能连上的那天起，全世界理论上都能连上</text>
+  <g font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    <rect x="175" y="1158" width="250" height="36" rx="18" fill="rgba(255,255,255,0.10)" stroke="#7fa3c8" stroke-width="1.5"/>
+    <text x="300" y="1182">1 鉴权必开</text>
+    <rect x="465" y="1158" width="250" height="36" rx="18" fill="rgba(255,255,255,0.10)" stroke="#7fa3c8" stroke-width="1.5"/>
+    <text x="590" y="1182">2 白名单放行</text>
+    <rect x="755" y="1158" width="250" height="36" rx="18" fill="rgba(255,255,255,0.10)" stroke="#7fa3c8" stroke-width="1.5"/>
+    <text x="880" y="1182">3 避默认端口</text>
+    <rect x="1045" y="1158" width="250" height="36" rx="18" fill="rgba(255,255,255,0.10)" stroke="#7fa3c8" stroke-width="1.5"/>
+    <text x="1170" y="1182">4 最小暴露</text>
+  </g>
+
+  <!-- ===== 点题 ===== -->
+  <text x="720" y="1272" font-size="20" font-weight="bold" fill="#22384f" text-anchor="middle">HTTP 能过，WebSocket 能长聊，其他皆死；服务端挂真证书</text>
+  <text x="720" y="1304" font-size="14" fill="#6b8299" text-anchor="middle">—— 口诀背后三层闸门：网络层 → 内容门 → dot 的安全甲</text>
+</svg>
