@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="960" viewBox="0 0 1440 960" font-family="Noto Sans CJK SC, sans-serif">
+  <rect width="1440" height="960" fill="#eef4f8"/>
+
+  <text x="720" y="56" font-size="38" font-weight="bold" fill="#22384f" text-anchor="middle">协议选型决策树</text>
+  <text x="720" y="90" font-size="17" fill="#6b8299" text-anchor="middle">先问能不能改造，再问能不能套壳</text>
+
+  <!-- 根节点 -->
+  <rect x="540" y="130" width="360" height="64" rx="32" fill="#2e5f8a"/>
+  <text x="720" y="171" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">你的服务说什么话？</text>
+
+  <!-- 树干与分支 -->
+  <line x1="720" y1="194" x2="720" y2="256" stroke="#7a93a8" stroke-width="3"/>
+  <path d="M180,286 V268 Q180,256 192,256 H1268 Q1285,256 1285,268 V286" fill="none" stroke="#7a93a8" stroke-width="3"/>
+  <line x1="470" y1="256" x2="470" y2="286" stroke="#7a93a8" stroke-width="3"/>
+  <line x1="760" y1="256" x2="760" y2="286" stroke="#7a93a8" stroke-width="3"/>
+  <line x1="1050" y1="256" x2="1050" y2="286" stroke="#7a93a8" stroke-width="3"/>
+
+  <!-- 分支标签 -->
+  <rect x="130" y="286" width="100" height="34" rx="17" fill="#5b7a94"/>
+  <text x="180" y="309" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">HTTP</text>
+  <rect x="408" y="286" width="124" height="34" rx="17" fill="#5b7a94"/>
+  <text x="470" y="309" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">WebSocket</text>
+  <rect x="702" y="286" width="116" height="34" rx="17" fill="#5b7a94"/>
+  <text x="760" y="309" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">其他 TCP</text>
+  <rect x="1002" y="286" width="96" height="34" rx="17" fill="#5b7a94"/>
+  <text x="1050" y="309" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">UDP</text>
+  <rect x="1208" y="286" width="154" height="34" rx="17" fill="#8a99a8"/>
+  <text x="1285" y="309" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">需要被主动连？</text>
+
+  <line x1="180" y1="320" x2="180" y2="340" stroke="#7a93a8" stroke-width="3"/>
+  <line x1="470" y1="320" x2="470" y2="340" stroke="#7a93a8" stroke-width="3"/>
+  <line x1="760" y1="320" x2="760" y2="340" stroke="#7a93a8" stroke-width="3"/>
+  <line x1="1050" y1="320" x2="1050" y2="340" stroke="#7a93a8" stroke-width="3"/>
+  <line x1="1285" y1="320" x2="1285" y2="340" stroke="#7a93a8" stroke-width="3"/>
+
+  <!-- 叶 1：HTTP 直接穿（绿） -->
+  <rect x="50" y="340" width="260" height="250" rx="18" fill="#e4f3ea" stroke="#3f9e6e" stroke-width="2.5"/>
+  <circle cx="180" cy="398" r="26" fill="#ffffff" stroke="#3f9e6e" stroke-width="2.5"/>
+  <rect x="166" y="388" width="28" height="20" rx="3" fill="none" stroke="#3f9e6e" stroke-width="2.5"/>
+  <path d="M166,390 L180,400 L194,390" fill="none" stroke="#3f9e6e" stroke-width="2.5"/>
+  <text x="180" y="462" font-size="24" font-weight="bold" fill="#2f7a55" text-anchor="middle">直接穿</text>
+  <line x1="80" y1="484" x2="280" y2="484" stroke="#9cc9ad" stroke-width="2"/>
+  <text x="180" y="512" font-size="13" fill="#7a93a8" text-anchor="middle">成本提示</text>
+  <text x="180" y="540" font-size="16" font-weight="bold" fill="#40566b" text-anchor="middle">成本最低：什么都不用做</text>
+  <text x="180" y="566" font-size="14" fill="#5b7185" text-anchor="middle">HTTP 是这里的母语</text>
+
+  <!-- 叶 2：WebSocket 直接穿（蓝） -->
+  <rect x="340" y="340" width="260" height="250" rx="18" fill="#e8eef6" stroke="#3a6ea5" stroke-width="2.5"/>
+  <circle cx="470" cy="398" r="26" fill="#ffffff" stroke="#3a6ea5" stroke-width="2.5"/>
+  <path d="M458,392 a12,12 0 0 1 22,4" fill="none" stroke="#3a6ea5" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M482,404 a12,12 0 0 1 -22,-4" fill="none" stroke="#3a6ea5" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="470" y="462" font-size="21" font-weight="bold" fill="#2e5f8a" text-anchor="middle">直接穿，注意心跳</text>
+  <line x1="370" y1="484" x2="570" y2="484" stroke="#a8bfd6" stroke-width="2"/>
+  <text x="470" y="512" font-size="13" fill="#7a93a8" text-anchor="middle">成本提示</text>
+  <text x="470" y="540" font-size="16" font-weight="bold" fill="#40566b" text-anchor="middle">心跳 + 重连退避</text>
+  <text x="470" y="566" font-size="14" fill="#5b7185" text-anchor="middle">+ 消息幂等，假设随时会断</text>
+
+  <!-- 叶 3：其他 TCP 套壳（蓝） -->
+  <rect x="630" y="340" width="260" height="250" rx="18" fill="#e8eef6" stroke="#3a6ea5" stroke-width="2.5"/>
+  <circle cx="760" cy="398" r="26" fill="#ffffff" stroke="#3a6ea5" stroke-width="2.5"/>
+  <rect x="746" y="386" width="28" height="8" rx="3" fill="#3a6ea5"/>
+  <rect x="746" y="398" width="28" height="8" rx="3" fill="#57b8b0"/>
+  <rect x="746" y="410" width="28" height="8" rx="3" fill="#3a6ea5"/>
+  <text x="760" y="462" font-size="24" font-weight="bold" fill="#2e5f8a" text-anchor="middle">wss 套壳</text>
+  <line x1="660" y1="484" x2="860" y2="484" stroke="#a8bfd6" stroke-width="2"/>
+  <text x="760" y="512" font-size="13" fill="#7a93a8" text-anchor="middle">成本提示</text>
+  <text x="760" y="540" font-size="16" font-weight="bold" fill="#40566b" text-anchor="middle">两端各加一层：</text>
+  <text x="760" y="566" font-size="14" fill="#5b7185" text-anchor="middle">本地中继 + 公网反代做桥</text>
+
+  <!-- 叶 4：UDP 死心（红） -->
+  <rect x="920" y="340" width="260" height="250" rx="18" fill="#f7e9e9" stroke="#c25a5a" stroke-width="2.5"/>
+  <circle cx="1050" cy="398" r="26" fill="#ffffff" stroke="#c25a5a" stroke-width="2.5"/>
+  <line x1="1040" y1="388" x2="1060" y2="408" stroke="#c25a5a" stroke-width="4" stroke-linecap="round"/>
+  <line x1="1060" y1="388" x2="1040" y2="408" stroke="#c25a5a" stroke-width="4" stroke-linecap="round"/>
+  <text x="1050" y="462" font-size="22" font-weight="bold" fill="#a14f4f" text-anchor="middle">死心 · 改架构</text>
+  <line x1="950" y1="484" x2="1150" y2="484" stroke="#d3a0a0" stroke-width="2"/>
+  <text x="1050" y="512" font-size="13" fill="#7a93a8" text-anchor="middle">成本提示</text>
+  <text x="1050" y="540" font-size="16" font-weight="bold" fill="#40566b" text-anchor="middle">不是难一点，是没这条路</text>
+  <text x="1050" y="566" font-size="14" fill="#5b7185" text-anchor="middle">改成 HTTP 轮询或长连</text>
+
+  <!-- 旁支：需要被主动连（灰） -->
+  <rect x="1196" y="340" width="194" height="250" rx="18" fill="#eef1f4" stroke="#8a99a8" stroke-width="2" stroke-dasharray="7 5"/>
+  <circle cx="1293" cy="398" r="24" fill="#ffffff" stroke="#8a99a8" stroke-width="2.5"/>
+  <path d="M1284,398 h16 m-6,-6 6,6 -6,6" fill="none" stroke="#8a99a8" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="1293" y="462" font-size="20" font-weight="bold" fill="#5f6f7d" text-anchor="middle">也不行</text>
+  <line x1="1218" y1="484" x2="1368" y2="484" stroke="#b3bec7" stroke-width="2"/>
+  <text x="1293" y="512" font-size="12" fill="#7a93a8" text-anchor="middle">没有入站通道</text>
+  <text x="1293" y="540" font-size="14" font-weight="bold" fill="#5f6f7d" text-anchor="middle">反过来：你主动</text>
+  <text x="1293" y="564" font-size="14" fill="#5f6f7d" text-anchor="middle">轮询或挂长连</text>
+
+  <!-- 结论带 -->
+  <rect x="40" y="650" width="1360" height="56" rx="28" fill="#2e5f8a"/>
+  <text x="720" y="686" font-size="19" font-weight="bold" fill="#ffffff" text-anchor="middle">HTTP 化永远最便宜，比写中继便宜一个数量级——先问能不能改造，再问能不能套壳</text>
+  <text x="720" y="752" font-size="15" fill="#6b8299" text-anchor="middle">套壳的成本主要在公网那一侧（需一台常开机器收帧、拆帧、还原字节） · UDP 不要抱幻想</text>
+</svg>

@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="920" viewBox="0 0 1440 920" font-family="Noto Sans CJK SC, sans-serif">
+  <rect width="1440" height="920" fill="#eef4f8"/>
+
+  <text x="720" y="56" font-size="38" font-weight="bold" fill="#22384f" text-anchor="middle">沙箱网络边界地图</text>
+  <text x="720" y="90" font-size="17" fill="#6b8299" text-anchor="middle">海关检查站总表 · 什么能过，什么不能过</text>
+
+  <!-- ===== 绿色可通行区 ===== -->
+  <rect x="40" y="120" width="1010" height="320" rx="20" fill="#e4f3ea" stroke="#3f9e6e" stroke-width="2.5"/>
+  <rect x="70" y="144" width="212" height="40" rx="20" fill="#3f9e6e"/>
+  <text x="176" y="171" font-size="19" font-weight="bold" fill="#ffffff" text-anchor="middle">✓ 可通行 PASS</text>
+  <g transform="rotate(-12 950 158)">
+    <circle cx="950" cy="158" r="38" fill="#e4f3ea" stroke="#3f9e6e" stroke-width="3" stroke-dasharray="6 5"/>
+    <text x="950" y="166" font-size="19" font-weight="bold" fill="#3f9e6e" text-anchor="middle">验讫</text>
+  </g>
+
+  <!-- 绿区 4 格 -->
+  <g>
+    <rect x="70" y="200" width="225" height="220" rx="14" fill="#ffffff" stroke="#9cc9ad" stroke-width="2"/>
+    <circle cx="182" cy="252" r="26" fill="#e4f3ea" stroke="#3f9e6e" stroke-width="2.5"/>
+    <rect x="168" y="238" width="20" height="28" rx="4" fill="#3f9e6e"/>
+    <path d="M192,252 h14 m-5,-5 5,5 -5,5" fill="none" stroke="#3f9e6e" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="182" y="308" font-size="18" font-weight="bold" fill="#22384f" text-anchor="middle">CONNECT 任意端口</text>
+    <text x="182" y="342" font-size="14" fill="#5b7185" text-anchor="middle">报哪个端口</text>
+    <text x="182" y="364" font-size="14" fill="#5b7185" text-anchor="middle">前台都替你接通</text>
+    <text x="182" y="398" font-size="13" fill="#8aa3b5" text-anchor="middle">隧道建立即放行</text>
+  </g>
+  <g>
+    <rect x="315" y="200" width="225" height="220" rx="14" fill="#ffffff" stroke="#9cc9ad" stroke-width="2"/>
+    <circle cx="427" cy="252" r="26" fill="#e4f3ea" stroke="#3f9e6e" stroke-width="2.5"/>
+    <rect x="413" y="242" width="28" height="20" rx="3" fill="#ffffff" stroke="#3f9e6e" stroke-width="2.5"/>
+    <path d="M413,244 L427,254 L441,244" fill="none" stroke="#3f9e6e" stroke-width="2.5"/>
+    <text x="427" y="308" font-size="18" font-weight="bold" fill="#22384f" text-anchor="middle">HTTP 载荷</text>
+    <text x="427" y="342" font-size="14" fill="#5b7185" text-anchor="middle">这门里的母语</text>
+    <text x="427" y="364" font-size="14" fill="#5b7185" text-anchor="middle">读得懂就放行</text>
+    <text x="427" y="398" font-size="13" fill="#8aa3b5" text-anchor="middle">请求 / 响应正常往返</text>
+  </g>
+  <g>
+    <rect x="560" y="200" width="225" height="220" rx="14" fill="#ffffff" stroke="#9cc9ad" stroke-width="2"/>
+    <circle cx="672" cy="252" r="26" fill="#e4f3ea" stroke="#3f9e6e" stroke-width="2.5"/>
+    <path d="M660,246 a12,12 0 0 1 22,4" fill="none" stroke="#3f9e6e" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M684,258 a12,12 0 0 1 -22,-4" fill="none" stroke="#3f9e6e" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="672" y="308" font-size="18" font-weight="bold" fill="#22384f" text-anchor="middle">WebSocket 长连</text>
+    <text x="672" y="342" font-size="14" fill="#5b7185" text-anchor="middle">升级 101 后一直聊</text>
+    <text x="672" y="364" font-size="14" fill="#5b7185" text-anchor="middle">门卫只搬字节</text>
+    <text x="672" y="398" font-size="13" fill="#8aa3b5" text-anchor="middle">唯一的长连接活路</text>
+  </g>
+  <g>
+    <rect x="805" y="200" width="225" height="220" rx="14" fill="#ffffff" stroke="#9cc9ad" stroke-width="2"/>
+    <circle cx="917" cy="252" r="26" fill="#e4f3ea" stroke="#3f9e6e" stroke-width="2.5"/>
+    <path d="M917,238 l14,5 v9 c0,9 -6,14 -14,17 c-8,-3 -14,-8 -14,-17 v-9 Z" fill="none" stroke="#3f9e6e" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M910,252 l5,5 9,-9" fill="none" stroke="#3f9e6e" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="917" y="308" font-size="18" font-weight="bold" fill="#22384f" text-anchor="middle">公共 CA 证书</text>
+    <text x="917" y="342" font-size="14" fill="#5b7185" text-anchor="middle">对面证件须由正规</text>
+    <text x="917" y="364" font-size="14" fill="#5b7185" text-anchor="middle">机构签发才放行</text>
+    <text x="917" y="398" font-size="13" fill="#8aa3b5" text-anchor="middle">门卫替你把关上游</text>
+  </g>
+
+  <!-- ===== 检查站分界 ===== -->
+  <rect x="110" y="468" width="870" height="14" rx="7" fill="#e8b0b0"/>
+  <g fill="#c25a5a">
+    <rect x="126" y="468" width="44" height="14" rx="7"/>
+    <rect x="214" y="468" width="44" height="14" rx="7"/>
+    <rect x="302" y="468" width="44" height="14" rx="7"/>
+    <rect x="390" y="468" width="44" height="14" rx="7"/>
+    <rect x="478" y="468" width="44" height="14" rx="7"/>
+    <rect x="566" y="468" width="44" height="14" rx="7"/>
+    <rect x="654" y="468" width="44" height="14" rx="7"/>
+    <rect x="742" y="468" width="44" height="14" rx="7"/>
+    <rect x="830" y="468" width="44" height="14" rx="7"/>
+    <rect x="918" y="468" width="44" height="14" rx="7"/>
+  </g>
+  <rect x="96" y="446" width="14" height="62" rx="5" fill="#7a93a8"/>
+  <rect x="980" y="446" width="14" height="62" rx="5" fill="#7a93a8"/>
+  <rect x="496" y="420" width="98" height="66" rx="10" fill="#8fb3c9" stroke="#5b7a94" stroke-width="2.5"/>
+  <path d="M488,422 L545,392 L602,422 Z" fill="#6f96b0" stroke="#5b7a94" stroke-width="2.5" stroke-linejoin="round"/>
+  <rect x="524" y="438" width="42" height="28" rx="4" fill="#dbe9f2" stroke="#5b7a94" stroke-width="2"/>
+  <text x="545" y="510" font-size="14" font-weight="bold" fill="#5b7a94" text-anchor="middle">语义检查站</text>
+
+  <!-- ===== 红色不可通行区 ===== -->
+  <rect x="40" y="524" width="1010" height="296" rx="20" fill="#f7e9e9" stroke="#c25a5a" stroke-width="2.5"/>
+  <rect x="70" y="548" width="238" height="40" rx="20" fill="#c25a5a"/>
+  <text x="189" y="575" font-size="19" font-weight="bold" fill="#ffffff" text-anchor="middle">✕ 不可通行 DENIED</text>
+  <g transform="rotate(10 950 562)">
+    <circle cx="950" cy="562" r="34" fill="#f7e9e9" stroke="#c25a5a" stroke-width="3" stroke-dasharray="6 5"/>
+    <text x="950" y="571" font-size="21" font-weight="bold" fill="#c25a5a" text-anchor="middle">拒</text>
+  </g>
+
+  <!-- 红区 4 格 -->
+  <g>
+    <rect x="70" y="604" width="225" height="196" rx="14" fill="#ffffff" stroke="#d3a0a0" stroke-width="2"/>
+    <circle cx="182" cy="650" r="24" fill="#f7e9e9" stroke="#c25a5a" stroke-width="2.5"/>
+    <line x1="172" y1="642" x2="192" y2="662" stroke="#c25a5a" stroke-width="4" stroke-linecap="round"/>
+    <line x1="192" y1="642" x2="172" y2="662" stroke="#c25a5a" stroke-width="4" stroke-linecap="round"/>
+    <text x="182" y="700" font-size="18" font-weight="bold" fill="#22384f" text-anchor="middle">直连 TCP</text>
+    <text x="182" y="732" font-size="14" fill="#5b7185" text-anchor="middle">毫秒级本地拒绝</text>
+    <text x="182" y="754" font-size="14" fill="#5b7185" text-anchor="middle">包根本没出机器</text>
+  </g>
+  <g>
+    <rect x="315" y="604" width="225" height="196" rx="14" fill="#ffffff" stroke="#d3a0a0" stroke-width="2"/>
+    <circle cx="427" cy="650" r="24" fill="#f7e9e9" stroke="#c25a5a" stroke-width="2.5"/>
+    <text x="427" y="658" font-size="15" font-weight="bold" fill="#c25a5a" text-anchor="middle" font-family="monospace">01×</text>
+    <text x="427" y="700" font-size="17" font-weight="bold" fill="#22384f" text-anchor="middle">非 HTTP 二进制载荷</text>
+    <text x="427" y="732" font-size="14" fill="#5b7185" text-anchor="middle">静默丢弃</text>
+    <text x="427" y="754" font-size="14" fill="#5b7185" text-anchor="middle">零回复 ≠ 报错</text>
+  </g>
+  <g>
+    <rect x="560" y="604" width="225" height="196" rx="14" fill="#ffffff" stroke="#d3a0a0" stroke-width="2"/>
+    <circle cx="672" cy="650" r="24" fill="#f7e9e9" stroke="#c25a5a" stroke-width="2.5"/>
+    <rect x="661" y="640" width="22" height="16" rx="2" fill="none" stroke="#c25a5a" stroke-width="2"/>
+    <line x1="662" y1="641" x2="682" y2="659" stroke="#c25a5a" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="672" y="700" font-size="18" font-weight="bold" fill="#22384f" text-anchor="middle">自签证书</text>
+    <text x="672" y="732" font-size="14" fill="#5b7185" text-anchor="middle">上游校验不过</text>
+    <text x="672" y="754" font-size="14" fill="#5b7185" text-anchor="middle">吃到 502</text>
+  </g>
+  <g>
+    <rect x="805" y="604" width="225" height="196" rx="14" fill="#ffffff" stroke="#d3a0a0" stroke-width="2"/>
+    <circle cx="917" cy="650" r="24" fill="#f7e9e9" stroke="#c25a5a" stroke-width="2.5"/>
+    <circle cx="908" cy="644" r="3" fill="#c25a5a"/>
+    <circle cx="922" cy="640" r="3" fill="#c25a5a"/>
+    <circle cx="914" cy="656" r="3" fill="#c25a5a"/>
+    <circle cx="927" cy="652" r="3" fill="#c25a5a"/>
+    <text x="917" y="700" font-size="18" font-weight="bold" fill="#22384f" text-anchor="middle">UDP</text>
+    <text x="917" y="732" font-size="14" fill="#5b7185" text-anchor="middle">这条走廊只走 TCP</text>
+    <text x="917" y="754" font-size="14" fill="#5b7185" text-anchor="middle">上的 HTTP 语义</text>
+  </g>
+
+  <!-- ===== 右侧 502 解读窄栏 ===== -->
+  <rect x="1080" y="120" width="320" height="700" rx="20" fill="#fbfdfe" stroke="#9db4c6" stroke-width="2" stroke-dasharray="9 7"/>
+  <text x="1240" y="162" font-size="20" font-weight="bold" fill="#22384f" text-anchor="middle">错误码解读</text>
+  <circle cx="1240" cy="248" r="56" fill="#c25a5a"/>
+  <text x="1240" y="264" font-size="40" font-weight="bold" fill="#ffffff" text-anchor="middle">502</text>
+  <text x="1240" y="344" font-size="14" fill="#8aa3b5" text-anchor="middle">现象</text>
+  <rect x="1104" y="356" width="272" height="38" rx="8" fill="#2b3a4a"/>
+  <text x="1240" y="380" font-size="13" fill="#d9e6f0" text-anchor="middle" font-family="monospace">502 server closed connection</text>
+
+  <rect x="1104" y="420" width="272" height="92" rx="12" fill="#e8eef4" stroke="#b8c9d6" stroke-width="2"/>
+  <text x="1240" y="456" font-size="17" font-weight="bold" fill="#22384f" text-anchor="middle">正解：链路已通</text>
+  <text x="1240" y="486" font-size="17" font-weight="bold" fill="#22384f" text-anchor="middle">只是后端不说 HTTP</text>
+
+  <circle cx="1124" cy="552" r="11" fill="#3f9e6e"/>
+  <text x="1124" y="557" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">✓</text>
+  <text x="1146" y="558" font-size="15" fill="#40566b">CONNECT 成功</text>
+  <circle cx="1124" cy="586" r="11" fill="#3f9e6e"/>
+  <text x="1124" y="591" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">✓</text>
+  <text x="1146" y="592" font-size="15" fill="#40566b">TLS 握手成功</text>
+  <circle cx="1124" cy="620" r="11" fill="#3f9e6e"/>
+  <text x="1124" y="625" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">✓</text>
+  <text x="1146" y="626" font-size="15" fill="#40566b">请求已到达后端</text>
+
+  <line x1="1104" y1="656" x2="1376" y2="656" stroke="#c3d4e0" stroke-width="2" stroke-dasharray="5 5"/>
+  <text x="1240" y="700" font-size="16" font-weight="bold" fill="#a14f4f" text-anchor="middle">看到 502 别查代理——</text>
+  <text x="1240" y="728" font-size="16" font-weight="bold" fill="#a14f4f" text-anchor="middle">该查的是你自己的后端</text>
+  <text x="1240" y="778" font-size="13" fill="#8aa3b5" text-anchor="middle">一个 502 同时证明三件事：</text>
+  <text x="1240" y="800" font-size="13" fill="#8aa3b5" text-anchor="middle">出网、加密、投递全都成立</text>
+
+  <text x="720" y="878" font-size="16" fill="#6b8299" text-anchor="middle">边界是硬的，但边界可测量——六条探针，半小时画出这张地图</text>
+</svg>

@@ -1,0 +1,26 @@
+# ---- OS 垃圾 ----
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ---- 编辑器 / IDE ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.tmp
+*.bak
+*.orig
+
+# ---- 日志 ----
+*.log
+
+# ---- 其他 ----
+__pycache__/
+*.py[cod]

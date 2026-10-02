@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="920" viewBox="0 0 1440 920" font-family="Noto Sans CJK SC, sans-serif">
+  <defs>
+    <marker id="arr3" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#5b7a94"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="920" fill="#eef4f8"/>
+
+  <text x="720" y="56" font-size="38" font-weight="bold" fill="#22384f" text-anchor="middle">通用中继架构</text>
+  <text x="720" y="90" font-size="17" fill="#6b8299" text-anchor="middle">同一条骨架：入口段 → 中段可开关模块 → 出口段</text>
+
+  <!-- 分区标注 -->
+  <text x="450" y="140" font-size="15" font-weight="bold" fill="#5b7a94" text-anchor="middle">—— 沙箱内 ——</text>
+  <text x="1160" y="140" font-size="15" font-weight="bold" fill="#5b7a94" text-anchor="middle">—— 公网 ——</text>
+  <line x1="875" y1="160" x2="875" y2="630" stroke="#b8c9d6" stroke-width="2" stroke-dasharray="8 7"/>
+
+  <!-- 纪律标签（上） -->
+  <rect x="900" y="196" width="500" height="46" rx="23" fill="#2e5f8a"/>
+  <circle cx="934" cy="219" r="13" fill="none" stroke="#9fc3e0" stroke-width="2.5"/>
+  <line x1="934" y1="206" x2="934" y2="232" stroke="#9fc3e0" stroke-width="2.5"/>
+  <text x="960" y="226" font-size="16" font-weight="bold" fill="#ffffff">纪律 · 同一 TLS socket，同一时刻只许一条线程触碰</text>
+
+  <!-- ===== 管道 ===== -->
+  <!-- A 服务客户端 -->
+  <rect x="50" y="270" width="180" height="120" rx="16" fill="#ffffff" stroke="#7ba3c4" stroke-width="2.5"/>
+  <rect x="92" y="292" width="96" height="60" rx="8" fill="#e8f1f8" stroke="#7ba3c4" stroke-width="2"/>
+  <line x1="92" y1="308" x2="188" y2="308" stroke="#7ba3c4" stroke-width="2"/>
+  <circle cx="102" cy="300" r="3" fill="#7ba3c4"/>
+  <text x="140" y="340" font-size="18" font-weight="bold" fill="#22384f" text-anchor="middle">服务客户端</text>
+  <text x="140" y="414" font-size="13" fill="#7a93a8" text-anchor="middle">原生协议 · 不懂 HTTP</text>
+
+  <!-- 箭头：本地回环 -->
+  <line x1="232" y1="330" x2="286" y2="330" stroke="#5b7a94" stroke-width="3" marker-end="url(#arr3)"/>
+  <text x="259" y="316" font-size="13" fill="#5b7a94" text-anchor="middle">本地回环</text>
+  <text x="259" y="352" font-size="12" fill="#8aa3b5" text-anchor="middle">裸 TCP</text>
+
+  <!-- Relay 容器 -->
+  <rect x="290" y="240" width="560" height="212" rx="20" fill="#f2f7fb" stroke="#3a6ea5" stroke-width="2.5"/>
+  <text x="570" y="272" font-size="18" font-weight="bold" fill="#2e5f8a" text-anchor="middle">本地中继 relay（翻译员）</text>
+
+  <!-- 模块 1 CONNECT -->
+  <rect x="315" y="292" width="160" height="118" rx="12" fill="#ffffff" stroke="#7ba3c4" stroke-width="2"/>
+  <text x="395" y="326" font-size="16" font-weight="bold" fill="#22384f" text-anchor="middle">CONNECT 出网</text>
+  <rect x="373" y="344" width="44" height="22" rx="11" fill="#57b8b0"/>
+  <circle cx="406" cy="355" r="8" fill="#ffffff"/>
+  <text x="395" y="392" font-size="12" fill="#8aa3b5" text-anchor="middle">可开关</text>
+  <!-- 模块 2 TLS -->
+  <rect x="495" y="292" width="160" height="118" rx="12" fill="#ffffff" stroke="#7ba3c4" stroke-width="2"/>
+  <text x="575" y="326" font-size="16" font-weight="bold" fill="#22384f" text-anchor="middle">TLS</text>
+  <rect x="553" y="344" width="44" height="22" rx="11" fill="#57b8b0"/>
+  <circle cx="586" cy="355" r="8" fill="#ffffff"/>
+  <text x="575" y="392" font-size="12" fill="#8aa3b5" text-anchor="middle">可开关</text>
+  <!-- 模块 3 WS -->
+  <rect x="675" y="292" width="160" height="118" rx="12" fill="#ffffff" stroke="#7ba3c4" stroke-width="2"/>
+  <text x="755" y="326" font-size="16" font-weight="bold" fill="#22384f" text-anchor="middle">WS 帧翻译</text>
+  <rect x="733" y="344" width="44" height="22" rx="11" fill="#57b8b0"/>
+  <circle cx="766" cy="355" r="8" fill="#ffffff"/>
+  <text x="755" y="392" font-size="12" fill="#8aa3b5" text-anchor="middle">可开关</text>
+
+  <text x="570" y="438" font-size="13" fill="#5b7185" text-anchor="middle">升级成功后：双向字节泵 · 客户端 ↔ 上游</text>
+
+  <!-- 箭头 relay→反代 -->
+  <line x1="852" y1="330" x2="896" y2="330" stroke="#5b7a94" stroke-width="3" marker-end="url(#arr3)"/>
+  <text x="856" y="314" font-size="13" fill="#5b7a94" text-anchor="middle">wss</text>
+
+  <!-- C 公网反代 -->
+  <rect x="900" y="270" width="170" height="120" rx="16" fill="#ffffff" stroke="#7ba3c4" stroke-width="2.5"/>
+  <rect x="950" y="288" width="70" height="14" rx="4" fill="#e8f1f8" stroke="#7ba3c4" stroke-width="2"/>
+  <rect x="950" y="308" width="70" height="14" rx="4" fill="#e8f1f8" stroke="#7ba3c4" stroke-width="2"/>
+  <circle cx="960" cy="295" r="3" fill="#57b8b0"/>
+  <circle cx="960" cy="315" r="3" fill="#57b8b0"/>
+  <text x="985" y="356" font-size="18" font-weight="bold" fill="#22384f" text-anchor="middle">公网反代</text>
+  <text x="985" y="414" font-size="13" fill="#7a93a8" text-anchor="middle">收帧入口</text>
+
+  <line x1="1072" y1="330" x2="1106" y2="330" stroke="#5b7a94" stroke-width="3" marker-end="url(#arr3)"/>
+
+  <!-- D ws 桥 -->
+  <rect x="1110" y="270" width="140" height="120" rx="16" fill="#ffffff" stroke="#7ba3c4" stroke-width="2.5"/>
+  <path d="M1146,300 h28 m-8,-8 8,8 -8,8" fill="none" stroke="#3a6ea5" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M1214,318 h-28 m8,-8 -8,8 8,8" fill="none" stroke="#3ba8a0" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="1180" y="356" font-size="18" font-weight="bold" fill="#22384f" text-anchor="middle">ws 桥</text>
+  <text x="1180" y="414" font-size="13" fill="#7a93a8" text-anchor="middle">拆帧 · 还原字节</text>
+
+  <line x1="1252" y1="330" x2="1296" y2="330" stroke="#5b7a94" stroke-width="3" marker-end="url(#arr3)"/>
+  <text x="1274" y="316" font-size="12" fill="#8aa3b5" text-anchor="middle">原始字节</text>
+
+  <!-- E 真实服务 -->
+  <rect x="1300" y="270" width="100" height="120" rx="16" fill="#2e5f8a" stroke="#2e5f8a" stroke-width="2.5"/>
+  <circle cx="1350" cy="308" r="14" fill="none" stroke="#9fc3e0" stroke-width="2.5"/>
+  <circle cx="1350" cy="308" r="5" fill="#9fc3e0"/>
+  <text x="1350" y="362" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">真实服务</text>
+  <text x="1350" y="414" font-size="13" fill="#7a93a8" text-anchor="middle">游戏 / 数据库 / SSH…</text>
+
+  <!-- ===== 排障里程碑 ===== -->
+  <line x1="180" y1="516" x2="1330" y2="516" stroke="#b8c9d6" stroke-width="2"/>
+  <line x1="395" y1="452" x2="395" y2="496" stroke="#b8c9d6" stroke-width="2" stroke-dasharray="4 4"/>
+  <line x1="575" y1="452" x2="575" y2="496" stroke="#b8c9d6" stroke-width="2" stroke-dasharray="4 4"/>
+  <line x1="755" y1="452" x2="755" y2="496" stroke="#b8c9d6" stroke-width="2" stroke-dasharray="4 4"/>
+  <line x1="1180" y1="452" x2="1180" y2="496" stroke="#b8c9d6" stroke-width="2" stroke-dasharray="4 4"/>
+
+  <rect x="310" y="496" width="170" height="40" rx="20" fill="#2e5f8a"/>
+  <text x="395" y="522" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">① CONNECT 通过</text>
+  <rect x="490" y="496" width="170" height="40" rx="20" fill="#2e5f8a"/>
+  <text x="575" y="522" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">② TLS 已建立</text>
+  <rect x="670" y="496" width="170" height="40" rx="20" fill="#2e5f8a"/>
+  <text x="755" y="522" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">③ WS 升级：101</text>
+  <rect x="1095" y="496" width="170" height="40" rx="20" fill="#3ba8a0"/>
+  <text x="1180" y="522" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">④ 字节搬运 ↑↓</text>
+
+  <text x="720" y="586" font-size="16" font-weight="bold" fill="#40566b" text-anchor="middle">日志停在哪一行，问题就在哪一层</text>
+
+  <!-- 纪律标签（下） -->
+  <rect x="290" y="650" width="860" height="66" rx="16" fill="#fbfdfe" stroke="#3ba8a0" stroke-width="2"/>
+  <path d="M330,672 v-8 a11,11 0 0 1 22,0 v8" fill="none" stroke="#2f8f88" stroke-width="4"/>
+  <rect x="323" y="672" width="36" height="28" rx="7" fill="#57b8b0"/>
+  <circle cx="341" cy="685" r="4" fill="#ffffff"/>
+  <text x="384" y="691" font-size="16" font-weight="bold" fill="#22384f">纪律 · 证书校验恒开，不提供关闭开关——没有跳过校验分支的中继，才能放心交给别人跑</text>
+
+  <text x="720" y="780" font-size="15" fill="#6b8299" text-anchor="middle">套壳不是欺骗，是把不合适的内容装进合规的信封</text>
+</svg>
